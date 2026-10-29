@@ -1,0 +1,102 @@
+{
+  "id": "cx-05-css",
+  "modulo": "client-extensions",
+  "ordem": 5,
+  "url": "https://learn.liferay.com/w/dxp/development/customizing-liferays-look-and-feel/using-a-css-client-extension",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "Na prática: uma client extension de CSS",
+    "en": "In practice: a CSS client extension"
+  },
+  "resumo": {
+    "pt": "Uma extensão de CSS usa o type globalCSS, e a propriedade url aponta para o arquivo .css. Depois do deploy, você aplica na página: entra no modo de edição, abre as opções de design da página (Page Design Options), vai em CSS Client Extensions, adiciona a extensão, salva e publica. Esse é o escopo padrão, por página. Com scope: company (DXP 2025.Q1+ ou Portal GA132+), o CSS vale em todas as páginas, inclusive as de administração, logo após o deploy e sem passo na interface.",
+    "en": "A CSS extension uses type globalCSS, and the url property points to the .css file. After deploying, you apply it on the page: enter edit mode, open Page Design Options, go to CSS Client Extensions, add the extension, save and publish. That is the default scope, per page. With scope: company (DXP 2025.Q1+ or Portal GA132+), the CSS applies to every page, including admin pages, right after deploy and with no UI step."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Qual type você usa para uma client extension de CSS aplicada às páginas?",
+        "en": "Which type do you use for a CSS client extension applied to pages?"
+      },
+      "opcoes": [
+        {
+          "pt": "themeFavicon",
+          "en": "themeFavicon"
+        },
+        {
+          "pt": "iframe",
+          "en": "iframe"
+        },
+        {
+          "pt": "globalCSS",
+          "en": "globalCSS"
+        }
+      ],
+      "correta": 2,
+      "explicacao": {
+        "pt": "globalCSS é a extensão de CSS. iframe carrega um app externo dentro de um iFrame e themeFavicon troca o ícone do site.",
+        "en": "globalCSS is the CSS extension. iframe loads an external app inside an iFrame and themeFavicon changes the site icon."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Você quer que o CSS valha em todas as páginas, incluindo as de administração, sem configurar página por página. O que usa?",
+        "en": "You want the CSS to apply to every page, including admin pages, without setting it page by page. What do you use?"
+      },
+      "opcoes": [
+        {
+          "pt": "scope: company no client-extension.yaml",
+          "en": "scope: company in client-extension.yaml"
+        },
+        {
+          "pt": "Adicionar a extensão em cada página",
+          "en": "Add the extension on each page"
+        },
+        {
+          "pt": "Colocar o CSS em configs/common",
+          "en": "Put the CSS in configs/common"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "Com scope: company, a extensão vale para a instância inteira assim que é implantada. Só funciona em extensões criadas no Workspace, a partir do DXP 2025.Q1 ou Portal GA132.",
+        "en": "With scope: company, the extension applies to the whole instance as soon as it is deployed. It only works for Workspace-built extensions, from DXP 2025.Q1 or Portal GA132."
+      }
+    },
+    {
+      "id": "o1",
+      "tipo": "ordenar",
+      "enunciado": {
+        "pt": "Coloque em ordem os passos para aplicar uma extensão de CSS a uma página.",
+        "en": "Put in order the steps to apply a CSS extension to a page."
+      },
+      "passos": [
+        {
+          "pt": "Entrar no modo de edição da página (ícone de lápis)",
+          "en": "Enter page edit mode (pencil icon)"
+        },
+        {
+          "pt": "Abrir a configuração em Page Design Options",
+          "en": "Open the configuration in Page Design Options"
+        },
+        {
+          "pt": "Em CSS Client Extensions, adicionar a extensão",
+          "en": "In CSS Client Extensions, add the extension"
+        },
+        {
+          "pt": "Salvar e publicar a página",
+          "en": "Save and publish the page"
+        }
+      ],
+      "explicacao": {
+        "pt": "As opções de design só aparecem no modo de edição, e o estilo só fica visível fora dele depois de publicar.",
+        "en": "Design options only show up in edit mode, and the style only becomes visible outside it after publishing."
+      }
+    }
+  ]
+}

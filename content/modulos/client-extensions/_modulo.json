@@ -1,0 +1,12 @@
+{
+  "id": "client-extensions",
+  "ordem": 2,
+  "titulo": {
+    "pt": "Client Extensions",
+    "en": "Client Extensions"
+  },
+  "descricao": {
+    "pt": "O jeito recomendado de personalizar o Liferay sem implantar código dentro do servidor.",
+    "en": "The recommended way to customize Liferay without deploying code inside the server."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "workspace-05-ambientes",
+  "modulo": "workspace",
+  "ordem": 5,
+  "url": "https://learn.liferay.com/w/dxp/development/tooling/liferay-workspace/creating-deployment-environments",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "Ambientes: local, dev, uat e prod",
+    "en": "Environments: local, dev, uat and prod"
+  },
+  "resumo": {
+    "pt": "A pasta configs separa as configurações por ambiente: common (vale para todos), docker, local, dev, uat e prod. Quando o mesmo arquivo existe em common e em um ambiente, o do ambiente vence. Você escolhe o ambiente com a propriedade liferay.workspace.environment, por exemplo -Pliferay.workspace.environment=dev. Com ela, initBundle monta um Liferay de teste na pasta bundles, e distBundleZip ou distBundleTar geram um pacote pronto para instalar, na pasta build.",
+    "en": "The configs folder splits settings per environment: common (applies to all), docker, local, dev, uat and prod. When the same file exists in common and in an environment, the environment one wins. You pick the environment with the liferay.workspace.environment property, for example -Pliferay.workspace.environment=dev. With it, initBundle sets up a test Liferay in the bundles folder, and distBundleZip or distBundleTar produce a ready-to-install package in the build folder."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "O mesmo portal-ext.properties existe em configs/common e em configs/dev. Qual vale no ambiente dev?",
+        "en": "The same portal-ext.properties exists in configs/common and configs/dev. Which one applies in the dev environment?"
+      },
+      "opcoes": [
+        {
+          "pt": "O de common",
+          "en": "The one in common"
+        },
+        {
+          "pt": "O de dev",
+          "en": "The one in dev"
+        },
+        {
+          "pt": "Nenhum: dá erro de conflito",
+          "en": "Neither: it fails with a conflict"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "As pastas de ambiente sobrescrevem o common. Assim, o common guarda o que é igual em todo lugar e cada ambiente guarda só a diferença.",
+        "en": "Environment folders override common. That way common holds what is the same everywhere and each environment holds only the difference."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Como você gera um .zip do Liferay já configurado para o ambiente uat?",
+        "en": "How do you produce a .zip of Liferay already configured for the uat environment?"
+      },
+      "opcoes": [
+        {
+          "pt": "./gradlew distBundleZip -Pliferay.workspace.environment=uat",
+          "en": "./gradlew distBundleZip -Pliferay.workspace.environment=uat"
+        },
+        {
+          "pt": "./gradlew deploy -Puat",
+          "en": "./gradlew deploy -Puat"
+        },
+        {
+          "pt": "blade init -v uat",
+          "en": "blade init -v uat"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "distBundleZip empacota o Liferay com as configurações do ambiente escolhido em liferay.workspace.environment. Para .tar.gz, use distBundleTar.",
+        "en": "distBundleZip packages Liferay with the settings of the environment chosen in liferay.workspace.environment. For .tar.gz, use distBundleTar."
+      }
+    },
+    {
+      "id": "o1",
+      "tipo": "ordenar",
+      "enunciado": {
+        "pt": "Coloque em ordem o caminho de uma configuração até um pacote para o ambiente dev.",
+        "en": "Put in order the path from a setting to a package for the dev environment."
+      },
+      "passos": [
+        {
+          "pt": "Colocar o arquivo de configuração em configs/dev",
+          "en": "Put the configuration file in configs/dev"
+        },
+        {
+          "pt": "Testar localmente (./gradlew initBundle -Pliferay.workspace.environment=dev)",
+          "en": "Test locally (./gradlew initBundle -Pliferay.workspace.environment=dev)"
+        },
+        {
+          "pt": "Gerar o pacote (./gradlew distBundleZip -Pliferay.workspace.environment=dev)",
+          "en": "Build the package (./gradlew distBundleZip -Pliferay.workspace.environment=dev)"
+        },
+        {
+          "pt": "Pegar o pacote na pasta build e instalar no servidor",
+          "en": "Take the package from the build folder and install it on the server"
+        }
+      ],
+      "explicacao": {
+        "pt": "A configuração vem primeiro, depois você testa no bundle local, gera o pacote e só então leva o pacote da pasta build para o servidor.",
+        "en": "The setting comes first, then you test it in the local bundle, build the package and only then take the package from the build folder to the server."
+      }
+    }
+  ]
+}

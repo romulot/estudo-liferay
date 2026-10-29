@@ -1,0 +1,99 @@
+{
+  "id": "workspace-02-criar",
+  "modulo": "workspace",
+  "ordem": 2,
+  "url": "https://learn.liferay.com/w/dxp/development/tooling/liferay-workspace/creating-a-liferay-workspace",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "Criando um Workspace",
+    "en": "Creating a Workspace"
+  },
+  "resumo": {
+    "pt": "O jeito mais rápido é o Blade CLI: \"blade init nome\" cria o Workspace e pergunta qual versão do Liferay usar. Para escolher a versão de antemão, liste as opções com \"blade init -l\" e crie com \"blade init -v versão nome\". A versão fica gravada na propriedade liferay.workspace.product, no gradle.properties. Também dá para montar tudo à mão: um settings.gradle que aplica o plugin com.liferay.workspace, o Gradle Wrapper e o gradle.properties.",
+    "en": "The fastest way is Blade CLI: \"blade init name\" creates the Workspace and asks which Liferay version to use. To pick the version upfront, list the options with \"blade init -l\" and create it with \"blade init -v version name\". The version is stored in the liferay.workspace.product property, in gradle.properties. You can also build it by hand: a settings.gradle that applies the com.liferay.workspace plugin, the Gradle Wrapper and gradle.properties."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Qual propriedade diz ao Workspace qual versão do Liferay usar?",
+        "en": "Which property tells Workspace which Liferay version to use?"
+      },
+      "opcoes": [
+        {
+          "pt": "liferay.workspace.product",
+          "en": "liferay.workspace.product"
+        },
+        {
+          "pt": "liferay.portal.version",
+          "en": "liferay.portal.version"
+        },
+        {
+          "pt": "gradle.liferay.release",
+          "en": "gradle.liferay.release"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "liferay.workspace.product, no gradle.properties, define a versão. As outras duas não existem: são nomes inventados para confundir.",
+        "en": "liferay.workspace.product, in gradle.properties, sets the version. The other two do not exist: they are made-up names meant to confuse."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Você quer ver todas as versões do Liferay disponíveis antes de criar o Workspace. Qual comando usa?",
+        "en": "You want to see every available Liferay version before creating the Workspace. Which command do you use?"
+      },
+      "opcoes": [
+        {
+          "pt": "blade server init",
+          "en": "blade server init"
+        },
+        {
+          "pt": "blade init -l",
+          "en": "blade init -l"
+        },
+        {
+          "pt": "./gradlew projects",
+          "en": "./gradlew projects"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "\"blade init -l\" lista as versões (com --all, lista todas). \"blade server init\" baixa o servidor e \"./gradlew projects\" lista os projetos do Workspace.",
+        "en": "\"blade init -l\" lists the versions (with --all, it lists all of them). \"blade server init\" downloads the server and \"./gradlew projects\" lists the Workspace projects."
+      }
+    },
+    {
+      "id": "q3",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Ao criar o Workspace à mão, qual arquivo aplica o plugin com.liferay.workspace?",
+        "en": "When creating the Workspace by hand, which file applies the com.liferay.workspace plugin?"
+      },
+      "opcoes": [
+        {
+          "pt": "gradle.properties",
+          "en": "gradle.properties"
+        },
+        {
+          "pt": "portal-ext.properties",
+          "en": "portal-ext.properties"
+        },
+        {
+          "pt": "settings.gradle",
+          "en": "settings.gradle"
+        }
+      ],
+      "correta": 2,
+      "explicacao": {
+        "pt": "O settings.gradle aplica o plugin. O gradle.properties guarda propriedades como a versão, e o portal-ext.properties configura o próprio Liferay, não o Workspace.",
+        "en": "settings.gradle applies the plugin. gradle.properties holds properties such as the version, and portal-ext.properties configures Liferay itself, not Workspace."
+      }
+    }
+  ]
+}

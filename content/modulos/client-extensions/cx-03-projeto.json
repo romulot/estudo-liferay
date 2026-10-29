@@ -1,0 +1,99 @@
+{
+  "id": "cx-03-projeto",
+  "modulo": "client-extensions",
+  "ordem": 3,
+  "url": "https://learn.liferay.com/w/dxp/development/client-extensions/working-with-client-extensions",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "O projeto e o client-extension.yaml",
+    "en": "The project and client-extension.yaml"
+  },
+  "resumo": {
+    "pt": "No Workspace, cada projeto de client extension fica numa pasta dentro de client-extensions/. O coração dele é o client-extension.yaml, que pode definir uma ou várias extensões. Para cada uma: name é o nome mostrado na interface, type diz o tipo (por exemplo globalCSS ou themeCSS) e decide como o Liferay trata a extensão, e assemble lista o que entra no pacote, com from (de onde), include (quais arquivos) e into (para onde).",
+    "en": "In Workspace, each client extension project lives in a folder inside client-extensions/. Its core is client-extension.yaml, which can define one or several extensions. For each one: name is the name shown in the UI, type tells the kind (for example globalCSS or themeCSS) and decides how Liferay handles it, and assemble lists what goes into the package, with from (where from), include (which files) and into (where to)."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Qual arquivo define as client extensions de um projeto?",
+        "en": "Which file defines a project's client extensions?"
+      },
+      "opcoes": [
+        {
+          "pt": "client-extension.yaml",
+          "en": "client-extension.yaml"
+        },
+        {
+          "pt": "portal-ext.properties",
+          "en": "portal-ext.properties"
+        },
+        {
+          "pt": "package.json",
+          "en": "package.json"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "O client-extension.yaml descreve cada extensão do projeto. O portal-ext.properties configura o Liferay e o package.json é do Node.",
+        "en": "client-extension.yaml describes each extension in the project. portal-ext.properties configures Liferay and package.json belongs to Node."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "O que a chave type decide?",
+        "en": "What does the type key decide?"
+      },
+      "opcoes": [
+        {
+          "pt": "O nome exibido na interface",
+          "en": "The name shown in the UI"
+        },
+        {
+          "pt": "Como o Liferay trata a extensão ao implantar",
+          "en": "How Liferay handles the extension on deploy"
+        },
+        {
+          "pt": "A pasta de saída do build",
+          "en": "The build output folder"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "O type (globalCSS, themeCSS, iframe...) diz que tipo de extensão é e, portanto, o que o Liferay faz com ela. O nome exibido é o name.",
+        "en": "The type (globalCSS, themeCSS, iframe...) says what kind of extension it is and therefore what Liferay does with it. The displayed name is name."
+      }
+    },
+    {
+      "id": "q3",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Num bloco assemble com \"from: assets\" e \"into: static\", o que acontece?",
+        "en": "In an assemble block with \"from: assets\" and \"into: static\", what happens?"
+      },
+      "opcoes": [
+        {
+          "pt": "A pasta static é apagada",
+          "en": "The static folder is deleted"
+        },
+        {
+          "pt": "Os arquivos de assets são copiados para static dentro do pacote",
+          "en": "The files from assets are copied to static inside the package"
+        },
+        {
+          "pt": "A pasta assets vira um projeto novo",
+          "en": "The assets folder becomes a new project"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "from diz de onde vêm os arquivos e into diz onde eles ficam no pacote. A pasta static é onde vão os recursos de frontend.",
+        "en": "from says where the files come from and into says where they land in the package. The static folder is where frontend resources go."
+      }
+    }
+  ]
+}

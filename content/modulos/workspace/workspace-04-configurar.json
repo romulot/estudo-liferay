@@ -1,0 +1,99 @@
+{
+  "id": "workspace-04-configurar",
+  "modulo": "workspace",
+  "ordem": 4,
+  "url": "https://learn.liferay.com/w/dxp/development/tooling/liferay-workspace/configuring-liferay-workspace",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "Versão e target platform",
+    "en": "Version and target platform"
+  },
+  "resumo": {
+    "pt": "Trocar o valor de liferay.workspace.product muda a versão do Liferay contra a qual o Workspace compila, e as dependências acompanham sozinhas. Isso acontece por causa da target platform, ligada por padrão: você declara dependências como release.dxp.api sem número de versão, e o Liferay fornece as versões que combinam com o produto escolhido. Para Liferay Portal (a edição comunitária), a dependência equivalente é release.portal.api.",
+    "en": "Changing liferay.workspace.product changes the Liferay version Workspace compiles against, and the dependencies follow automatically. This works because of the target platform, which is on by default: you declare dependencies such as release.dxp.api without a version number, and Liferay supplies the versions that match the chosen product. For Liferay Portal (the community edition), the equivalent dependency is release.portal.api."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Por que você pode declarar release.dxp.api sem número de versão?",
+        "en": "Why can you declare release.dxp.api without a version number?"
+      },
+      "opcoes": [
+        {
+          "pt": "Porque o Gradle sempre baixa a versão mais nova",
+          "en": "Because Gradle always downloads the newest version"
+        },
+        {
+          "pt": "Porque a target platform fornece a versão que combina com o produto",
+          "en": "Because the target platform supplies the version that matches the product"
+        },
+        {
+          "pt": "Porque dependências do Liferay não têm versão",
+          "en": "Because Liferay dependencies have no version"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "A target platform alinha as versões das dependências com o liferay.workspace.product. Pegar \"a mais nova\" poderia quebrar a compatibilidade com o seu Liferay.",
+        "en": "The target platform aligns dependency versions with liferay.workspace.product. Grabbing \"the newest\" could break compatibility with your Liferay."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Você vai atualizar o projeto para uma versão nova do Liferay. Qual é o primeiro ajuste no Workspace?",
+        "en": "You are updating the project to a new Liferay version. What is the first change in Workspace?"
+      },
+      "opcoes": [
+        {
+          "pt": "Mudar liferay.workspace.product no gradle.properties",
+          "en": "Change liferay.workspace.product in gradle.properties"
+        },
+        {
+          "pt": "Editar a versão de cada dependência à mão",
+          "en": "Edit every dependency version by hand"
+        },
+        {
+          "pt": "Apagar a pasta do Workspace e criar outra",
+          "en": "Delete the Workspace folder and create another one"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "Mudando o produto, as dependências gerenciadas pela target platform acompanham. Editar versão por versão é justamente o trabalho que ela evita.",
+        "en": "When you change the product, the dependencies managed by the target platform follow. Editing version by version is exactly the work it saves you."
+      }
+    },
+    {
+      "id": "q3",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Seu Workspace usa Liferay Portal, não DXP. Qual dependência de API você declara?",
+        "en": "Your Workspace uses Liferay Portal, not DXP. Which API dependency do you declare?"
+      },
+      "opcoes": [
+        {
+          "pt": "release.dxp.api",
+          "en": "release.dxp.api"
+        },
+        {
+          "pt": "release.portal.api",
+          "en": "release.portal.api"
+        },
+        {
+          "pt": "com.liferay.portal.kernel",
+          "en": "com.liferay.portal.kernel"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "release.dxp.api é para DXP e release.portal.api é para Portal. As duas reúnem as APIs públicas da versão escolhida.",
+        "en": "release.dxp.api is for DXP and release.portal.api is for Portal. Both bundle the public APIs of the chosen version."
+      }
+    }
+  ]
+}

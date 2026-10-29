@@ -1,0 +1,95 @@
+{
+  "id": "cx-01-o-que-sao",
+  "modulo": "client-extensions",
+  "ordem": 1,
+  "url": "https://learn.liferay.com/w/dxp/development/client-extensions",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "O que são Client Extensions",
+    "en": "What Client Extensions are"
+  },
+  "resumo": {
+    "pt": "Client extensions personalizam o Liferay por fora: mudam a aparência ou conectam serviços externos usando só as APIs do Liferay, sem mexer no que roda dentro do servidor. Módulos OSGi e temas, ao contrário, alteram o interior do Liferay. Como as APIs mudam pouco entre versões, as client extensions costumam atravessar atualizações com menos trabalho. Elas podem ser escritas em qualquer linguagem e funcionam no Liferay Self-Hosted, SaaS e PaaS.",
+    "en": "Client extensions customize Liferay from the outside: they change the look or connect external services using only Liferay's APIs, without touching what runs inside the server. OSGi modules and themes, in contrast, change Liferay's internals. Since the APIs change little between versions, client extensions tend to get through upgrades with less work. They can be written in any language and work on Liferay Self-Hosted, SaaS and PaaS."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Qual é a principal vantagem de uma client extension sobre um módulo OSGi?",
+        "en": "What is the main advantage of a client extension over an OSGi module?"
+      },
+      "opcoes": [
+        {
+          "pt": "Roda mais rápido dentro do servidor",
+          "en": "It runs faster inside the server"
+        },
+        {
+          "pt": "Usa só as APIs do Liferay, então sofre menos em atualizações",
+          "en": "It only uses Liferay's APIs, so it suffers less during upgrades"
+        },
+        {
+          "pt": "Tem acesso direto ao banco de dados",
+          "en": "It has direct database access"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "Ela não depende do interior do Liferay, só das APIs, que mudam pouco. Por isso tende a sobreviver melhor às atualizações.",
+        "en": "It does not depend on Liferay's internals, only on the APIs, which change little. That is why it tends to survive upgrades better."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Em qual linguagem você pode escrever uma client extension?",
+        "en": "In which language can you write a client extension?"
+      },
+      "opcoes": [
+        {
+          "pt": "Somente Java",
+          "en": "Only Java"
+        },
+        {
+          "pt": "Somente JavaScript",
+          "en": "Only JavaScript"
+        },
+        {
+          "pt": "Em qualquer linguagem ou tecnologia",
+          "en": "In any language or technology"
+        }
+      ],
+      "correta": 2,
+      "explicacao": {
+        "pt": "Como ela roda fora do Liferay e conversa por APIs, a tecnologia fica por sua conta.",
+        "en": "Since it runs outside Liferay and talks through APIs, the technology is up to you."
+      }
+    },
+    {
+      "id": "q3",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Sua empresa usa Liferay SaaS. Client extensions servem para ela?",
+        "en": "Your company uses Liferay SaaS. Do client extensions work for it?"
+      },
+      "opcoes": [
+        {
+          "pt": "Sim: funcionam em Self-Hosted, SaaS e PaaS",
+          "en": "Yes: they work on Self-Hosted, SaaS and PaaS"
+        },
+        {
+          "pt": "Não: só funcionam em Self-Hosted",
+          "en": "No: they only work on Self-Hosted"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "Esse é um dos motivos de serem o caminho recomendado: o mesmo tipo de personalização serve para os três modelos de hospedagem.",
+        "en": "That is one of the reasons they are the recommended path: the same kind of customization works for all three hosting models."
+      }
+    }
+  ]
+}

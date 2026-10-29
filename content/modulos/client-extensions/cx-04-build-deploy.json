@@ -1,0 +1,102 @@
+{
+  "id": "cx-04-build-deploy",
+  "modulo": "client-extensions",
+  "ordem": 4,
+  "url": "https://learn.liferay.com/w/dxp/development/client-extensions/working-with-client-extensions",
+  "versao": "Liferay DXP/Portal 7.4+ e Quarterly Releases",
+  "verificado_em": "2026-10-29",
+  "titulo": {
+    "pt": "Build e deploy: o pacote LUFFA",
+    "en": "Build and deploy: the LUFFA package"
+  },
+  "resumo": {
+    "pt": "O build de cada projeto gera um .zip chamado LUFFA (Liferay Universal File Format Archive), na pasta dist/ do projeto. Dentro dele vão arquivos de configuração em JSON, a pasta static/ (frontend) ou batch/ (dados), além de Dockerfile e LCP.json. Para implantar num Liferay próprio, o gradlew deploy faz tudo, ou você copia o .zip da pasta dist/ para [Liferay Home]/osgi/client-extensions/. No Liferay SaaS, o envio é feito com lcp deploy.",
+    "en": "Each project's build produces a .zip called a LUFFA (Liferay Universal File Format Archive), in the project's dist/ folder. It contains JSON configuration files, the static/ folder (frontend) or batch/ (data), plus Dockerfile and LCP.json. To deploy to your own Liferay, gradlew deploy does it all, or you copy the .zip from dist/ to [Liferay Home]/osgi/client-extensions/. On Liferay SaaS, you upload it with lcp deploy."
+  },
+  "atividades": [
+    {
+      "id": "q1",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "O que é um LUFFA?",
+        "en": "What is a LUFFA?"
+      },
+      "opcoes": [
+        {
+          "pt": "Um tipo de tema do Liferay",
+          "en": "A kind of Liferay theme"
+        },
+        {
+          "pt": "O .zip gerado pelo build de uma client extension",
+          "en": "The .zip produced by a client extension build"
+        },
+        {
+          "pt": "Um comando do Blade CLI",
+          "en": "A Blade CLI command"
+        }
+      ],
+      "correta": 1,
+      "explicacao": {
+        "pt": "LUFFA é o formato de pacote das client extensions: um .zip com a configuração e os arquivos da extensão.",
+        "en": "LUFFA is the package format for client extensions: a .zip with the extension's configuration and files."
+      }
+    },
+    {
+      "id": "q2",
+      "tipo": "quiz",
+      "pergunta": {
+        "pt": "Sem usar o Gradle, para qual pasta você copia o .zip num Liferay Self-Hosted?",
+        "en": "Without Gradle, which folder do you copy the .zip to on Liferay Self-Hosted?"
+      },
+      "opcoes": [
+        {
+          "pt": "[Liferay Home]/osgi/client-extensions/",
+          "en": "[Liferay Home]/osgi/client-extensions/"
+        },
+        {
+          "pt": "[Liferay Home]/osgi/modules/",
+          "en": "[Liferay Home]/osgi/modules/"
+        },
+        {
+          "pt": "configs/common/",
+          "en": "configs/common/"
+        }
+      ],
+      "correta": 0,
+      "explicacao": {
+        "pt": "Client extensions têm a pasta própria osgi/client-extensions. A configs/common é do Workspace, não do servidor.",
+        "en": "Client extensions have their own osgi/client-extensions folder. configs/common belongs to Workspace, not the server."
+      }
+    },
+    {
+      "id": "o1",
+      "tipo": "ordenar",
+      "enunciado": {
+        "pt": "Coloque em ordem o caminho de uma client extension até um Liferay Self-Hosted.",
+        "en": "Put in order the path of a client extension to a Liferay Self-Hosted."
+      },
+      "passos": [
+        {
+          "pt": "Descrever a extensão no client-extension.yaml",
+          "en": "Describe the extension in client-extension.yaml"
+        },
+        {
+          "pt": "Rodar o build do projeto",
+          "en": "Run the project build"
+        },
+        {
+          "pt": "Pegar o .zip (LUFFA) na pasta dist/",
+          "en": "Take the .zip (LUFFA) from the dist/ folder"
+        },
+        {
+          "pt": "Copiar para [Liferay Home]/osgi/client-extensions/",
+          "en": "Copy it to [Liferay Home]/osgi/client-extensions/"
+        }
+      ],
+      "explicacao": {
+        "pt": "Sem a descrição no YAML, o build não sabe o que empacotar. O pacote só existe depois do build, e só então pode ser copiado para o servidor.",
+        "en": "Without the YAML description, the build does not know what to package. The package only exists after the build, and only then can it be copied to the server."
+      }
+    }
+  ]
+}

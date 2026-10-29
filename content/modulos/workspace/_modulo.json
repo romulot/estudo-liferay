@@ -1,0 +1,12 @@
+{
+  "id": "workspace",
+  "ordem": 1,
+  "titulo": {
+    "pt": "Liferay Workspace",
+    "en": "Liferay Workspace"
+  },
+  "descricao": {
+    "pt": "O ambiente de trabalho padrão para criar, compilar e implantar projetos Liferay.",
+    "en": "The standard environment for creating, building and deploying Liferay projects."
+  }
+}
