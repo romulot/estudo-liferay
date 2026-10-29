@@ -10,8 +10,8 @@
     "en": "In practice: a CSS client extension"
   },
   "resumo": {
-    "pt": "Uma extensão de CSS usa o type globalCSS, e a propriedade url aponta para o arquivo .css. Depois do deploy, você aplica na página: entra no modo de edição, abre as opções de design da página (Page Design Options), vai em CSS Client Extensions, adiciona a extensão, salva e publica. Esse é o escopo padrão, por página. Com scope: company (DXP 2025.Q1+ ou Portal GA132+), o CSS vale em todas as páginas, inclusive as de administração, logo após o deploy e sem passo na interface.",
-    "en": "A CSS extension uses type globalCSS, and the url property points to the .css file. After deploying, you apply it on the page: enter edit mode, open Page Design Options, go to CSS Client Extensions, add the extension, save and publish. That is the default scope, per page. With scope: company (DXP 2025.Q1+ or Portal GA132+), the CSS applies to every page, including admin pages, right after deploy and with no UI step."
+    "pt": "Uma extensão de CSS usa o type globalCSS, e a propriedade url aponta para o arquivo .css. Depois do deploy, aplique a extensão na página: entre no modo de edição, abra as opções de design da página (Page Design Options), vá até CSS Client Extensions, adicione a extensão, salve e publique. Esse é o escopo padrão, por página. Com scope: company (DXP 2025.Q1+ ou Portal GA132+), o CSS é aplicado a todas as páginas, inclusive às de administração, logo após o deploy e sem nenhuma configuração na interface.",
+    "en": "A CSS extension uses type globalCSS, and the url property points to the .css file. After deploying, apply it to the page: enter edit mode, open Page Design Options, go to CSS Client Extensions, add the extension, save and publish. That is the default scope, per page. With scope: company (DXP 2025.Q1+ or Portal GA132+), the CSS applies to every page, including admin pages, right after deployment and with no configuration in the UI."
   },
   "atividades": [
     {
@@ -37,15 +37,15 @@
       ],
       "correta": 2,
       "explicacao": {
-        "pt": "globalCSS é a extensão de CSS. iframe carrega um app externo dentro de um iFrame e themeFavicon troca o ícone do site.",
-        "en": "globalCSS is the CSS extension. iframe loads an external app inside an iFrame and themeFavicon changes the site icon."
+        "pt": "globalCSS é a extensão de CSS. O iframe carrega um app externo dentro de um iFrame, e o themeFavicon troca o ícone do site.",
+        "en": "globalCSS is the CSS extension. iframe loads an external app inside an iFrame, and themeFavicon changes the site icon."
       }
     },
     {
       "id": "q2",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Você quer que o CSS valha em todas as páginas, incluindo as de administração, sem configurar página por página. O que usa?",
+        "pt": "Você quer que o CSS seja aplicado a todas as páginas, inclusive às de administração, sem configurar página por página. O que você usa?",
         "en": "You want the CSS to apply to every page, including admin pages, without setting it page by page. What do you use?"
       },
       "opcoes": [
@@ -64,8 +64,8 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "Com scope: company, a extensão vale para a instância inteira assim que é implantada. Só funciona em extensões criadas no Workspace, a partir do DXP 2025.Q1 ou Portal GA132.",
-        "en": "With scope: company, the extension applies to the whole instance as soon as it is deployed. It only works for Workspace-built extensions, from DXP 2025.Q1 or Portal GA132."
+        "pt": "Com scope: company, a extensão é aplicada à instância inteira assim que o deploy termina. Isso só vale para extensões criadas no Workspace, a partir do DXP 2025.Q1 ou do Portal GA132.",
+        "en": "With scope: company, the extension applies to the whole instance as soon as it is deployed. This only works for extensions built in Workspace, from DXP 2025.Q1 or Portal GA132 onward."
       }
     },
     {
@@ -81,8 +81,8 @@
           "en": "Enter page edit mode (pencil icon)"
         },
         {
-          "pt": "Abrir a configuração em Page Design Options",
-          "en": "Open the configuration in Page Design Options"
+          "pt": "Abrir as configurações em Page Design Options",
+          "en": "Open the settings in Page Design Options"
         },
         {
           "pt": "Em CSS Client Extensions, adicionar a extensão",

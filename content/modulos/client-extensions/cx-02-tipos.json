@@ -10,16 +10,16 @@
     "en": "The 4 groups of Client Extensions"
   },
   "resumo": {
-    "pt": "Pense em 4 gavetas. Frontend: arquivos e elementos que aparecem na página, como CSS, JavaScript, favicon do tema, elementos HTML personalizados e iFrames. Configuração: mudam o comportamento do Liferay por configuração, como as configurações de OAuth. Microsserviço: endpoints que o Liferay chama, por exemplo numa ação de objeto ou de workflow, para rodar lógica fora dele. Batch: entregam dados ao Liferay, como definições de objetos ou de workflow.",
-    "en": "Think of 4 drawers. Frontend: files and elements that show up on the page, such as CSS, JavaScript, the theme favicon, custom HTML elements and iFrames. Configuration: change Liferay's behavior through configuration, such as OAuth settings. Microservice: endpoints Liferay calls, for example on an object or workflow action, to run logic outside it. Batch: deliver data to Liferay, such as object or workflow definitions."
+    "pt": "Pense em 4 gavetas. Frontend: arquivos e elementos que aparecem na página, como CSS, JavaScript, o favicon do tema, elementos HTML personalizados e iFrames. Configuração: extensões que alteram o comportamento do Liferay por meio de configurações, como as de OAuth. Microsserviço: endpoints que o Liferay chama, por exemplo em uma ação de objeto ou de workflow, para executar lógica fora dele. Batch: extensões que enviam dados ao Liferay, como definições de objetos ou de workflows.",
+    "en": "Think of 4 drawers. Frontend: files and elements that show up on the page, such as CSS, JavaScript, the theme favicon, custom HTML elements and iFrames. Configuration: extensions that change Liferay's behavior through settings, such as OAuth settings. Microservice: endpoints that Liferay calls, for example on an object or workflow action, to run logic outside it. Batch: extensions that deliver data to Liferay, such as object or workflow definitions."
   },
   "atividades": [
     {
       "id": "q1",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Quando um registro de objeto é criado, você quer chamar um serviço seu para validar dados externos. Que grupo usa?",
-        "en": "When an object entry is created, you want to call your own service to check external data. Which group do you use?"
+        "pt": "Ao criar uma entrada de objeto, você quer chamar um serviço próprio para validar dados externos. Qual grupo você usa?",
+        "en": "When an object entry is created, you want to call your own service to validate external data. Which group do you use?"
       },
       "opcoes": [
         {
@@ -37,16 +37,16 @@
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "Microsserviços expõem endpoints que o Liferay aciona, como numa ação de objeto. Frontend mexe na página e batch entrega dados.",
-        "en": "Microservices expose endpoints Liferay triggers, such as on an object action. Frontend changes the page and batch delivers data."
+        "pt": "Microsserviços expõem endpoints que o Liferay aciona, como em uma ação de objeto. Frontend altera a página, e batch envia dados.",
+        "en": "Microservices expose endpoints that Liferay triggers, such as on an object action. Frontend changes the page, and batch delivers data."
       }
     },
     {
       "id": "q2",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Trocar o favicon do site pertence a qual grupo?",
-        "en": "Changing the site favicon belongs to which group?"
+        "pt": "A troca do favicon do site pertence a qual grupo?",
+        "en": "Which group does changing the site favicon belong to?"
       },
       "opcoes": [
         {
@@ -64,15 +64,15 @@
       ],
       "correta": 2,
       "explicacao": {
-        "pt": "O favicon é um recurso visual entregue à página, então é frontend.",
-        "en": "The favicon is a visual resource delivered to the page, so it is frontend."
+        "pt": "O favicon é um recurso visual entregue à página, portanto pertence ao grupo frontend.",
+        "en": "The favicon is a visual resource delivered to the page, so it belongs to the frontend group."
       }
     },
     {
       "id": "q3",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Você quer levar definições de objetos prontas para outro ambiente do Liferay. Que grupo usa?",
+        "pt": "Você quer levar definições de objetos prontas para outro ambiente do Liferay. Qual grupo você usa?",
         "en": "You want to bring ready-made object definitions to another Liferay environment. Which group do you use?"
       },
       "opcoes": [
@@ -91,16 +91,16 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "Batch existe para entregar dados e definições, como objetos e workflows, a uma instância do Liferay.",
-        "en": "Batch exists to deliver data and definitions, such as objects and workflows, to a Liferay instance."
+        "pt": "O grupo batch existe para enviar dados e definições, como objetos e workflows, a uma instância do Liferay.",
+        "en": "The batch group exists to deliver data and definitions, such as objects and workflows, to a Liferay instance."
       }
     },
     {
       "id": "q4",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Uma configuração de OAuth que autentica outras client extensions é de qual grupo?",
-        "en": "An OAuth setting that authenticates other client extensions belongs to which group?"
+        "pt": "Uma configuração de OAuth que autentica outras client extensions pertence a qual grupo?",
+        "en": "Which group does an OAuth setting that authenticates other client extensions belong to?"
       },
       "opcoes": [
         {
@@ -118,8 +118,8 @@
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "Ela muda como o Liferay funciona por meio de configuração, sem tela e sem lógica própria: é do grupo de configuração.",
-        "en": "It changes how Liferay works through configuration, with no screen and no logic of its own: it belongs to the configuration group."
+        "pt": "Ela altera o funcionamento do Liferay por meio de configuração, sem tela e sem lógica própria. Por isso, pertence ao grupo de configuração.",
+        "en": "It changes how Liferay works through configuration, with no UI and no logic of its own. So it belongs to the configuration group."
       }
     }
   ]

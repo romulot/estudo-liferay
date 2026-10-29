@@ -10,8 +10,8 @@
     "en": "Version and target platform"
   },
   "resumo": {
-    "pt": "Trocar o valor de liferay.workspace.product muda a versão do Liferay contra a qual o Workspace compila, e as dependências acompanham sozinhas. Isso acontece por causa da target platform, ligada por padrão: você declara dependências como release.dxp.api sem número de versão, e o Liferay fornece as versões que combinam com o produto escolhido. Para Liferay Portal (a edição comunitária), a dependência equivalente é release.portal.api.",
-    "en": "Changing liferay.workspace.product changes the Liferay version Workspace compiles against, and the dependencies follow automatically. This works because of the target platform, which is on by default: you declare dependencies such as release.dxp.api without a version number, and Liferay supplies the versions that match the chosen product. For Liferay Portal (the community edition), the equivalent dependency is release.portal.api."
+    "pt": "Alterar o valor de liferay.workspace.product muda a versão do Liferay usada para compilar o Workspace, e as dependências acompanham automaticamente. Isso acontece por causa da target platform, ativada por padrão: você declara dependências como release.dxp.api sem número de versão, e o Liferay fornece as versões compatíveis com o produto escolhido. No Liferay Portal (a edição comunitária), a dependência equivalente é release.portal.api.",
+    "en": "Changing liferay.workspace.product changes the Liferay version Workspace compiles against, and the dependencies follow automatically. This works because of the target platform, which is enabled by default: you declare dependencies such as release.dxp.api without a version number, and Liferay supplies the versions that match the chosen product. In Liferay Portal (the community edition), the equivalent dependency is release.portal.api."
   },
   "atividades": [
     {
@@ -27,18 +27,18 @@
           "en": "Because Gradle always downloads the newest version"
         },
         {
-          "pt": "Porque a target platform fornece a versão que combina com o produto",
+          "pt": "Porque a target platform fornece a versão compatível com o produto",
           "en": "Because the target platform supplies the version that matches the product"
         },
         {
-          "pt": "Porque dependências do Liferay não têm versão",
+          "pt": "Porque as dependências do Liferay não têm versão",
           "en": "Because Liferay dependencies have no version"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "A target platform alinha as versões das dependências com o liferay.workspace.product. Pegar \"a mais nova\" poderia quebrar a compatibilidade com o seu Liferay.",
-        "en": "The target platform aligns dependency versions with liferay.workspace.product. Grabbing \"the newest\" could break compatibility with your Liferay."
+        "pt": "A target platform alinha as versões das dependências ao liferay.workspace.product. Usar sempre \"a mais nova\" poderia quebrar a compatibilidade com o seu Liferay.",
+        "en": "The target platform aligns dependency versions with liferay.workspace.product. Always using \"the newest\" could break compatibility with your Liferay."
       }
     },
     {
@@ -46,16 +46,16 @@
       "tipo": "quiz",
       "pergunta": {
         "pt": "Você vai atualizar o projeto para uma versão nova do Liferay. Qual é o primeiro ajuste no Workspace?",
-        "en": "You are updating the project to a new Liferay version. What is the first change in Workspace?"
+        "en": "You are upgrading the project to a new Liferay version. What is the first thing to change in Workspace?"
       },
       "opcoes": [
         {
-          "pt": "Mudar liferay.workspace.product no gradle.properties",
+          "pt": "Alterar liferay.workspace.product no gradle.properties",
           "en": "Change liferay.workspace.product in gradle.properties"
         },
         {
-          "pt": "Editar a versão de cada dependência à mão",
-          "en": "Edit every dependency version by hand"
+          "pt": "Editar manualmente a versão de cada dependência",
+          "en": "Edit every dependency version manually"
         },
         {
           "pt": "Apagar a pasta do Workspace e criar outra",
@@ -64,15 +64,15 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "Mudando o produto, as dependências gerenciadas pela target platform acompanham. Editar versão por versão é justamente o trabalho que ela evita.",
-        "en": "When you change the product, the dependencies managed by the target platform follow. Editing version by version is exactly the work it saves you."
+        "pt": "Ao mudar o produto, as dependências gerenciadas pela target platform acompanham a mudança. Editar versão por versão é justamente o trabalho que ela evita.",
+        "en": "When you change the product, the dependencies managed by the target platform follow along. Editing them one by one is exactly the work it saves you."
       }
     },
     {
       "id": "q3",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Seu Workspace usa Liferay Portal, não DXP. Qual dependência de API você declara?",
+        "pt": "Seu Workspace usa o Liferay Portal, e não o DXP. Qual dependência de API você declara?",
         "en": "Your Workspace uses Liferay Portal, not DXP. Which API dependency do you declare?"
       },
       "opcoes": [
@@ -91,8 +91,8 @@
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "release.dxp.api é para DXP e release.portal.api é para Portal. As duas reúnem as APIs públicas da versão escolhida.",
-        "en": "release.dxp.api is for DXP and release.portal.api is for Portal. Both bundle the public APIs of the chosen version."
+        "pt": "release.dxp.api é para o DXP, e release.portal.api é para o Portal. As duas reúnem as APIs públicas da versão escolhida.",
+        "en": "release.dxp.api is for DXP, and release.portal.api is for Portal. Both bundle the public APIs of the chosen version."
       }
     }
   ]

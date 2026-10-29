@@ -10,8 +10,8 @@
     "en": "Build and deploy: the LUFFA package"
   },
   "resumo": {
-    "pt": "O build de cada projeto gera um .zip chamado LUFFA (Liferay Universal File Format Archive), na pasta dist/ do projeto. Dentro dele vão arquivos de configuração em JSON, a pasta static/ (frontend) ou batch/ (dados), além de Dockerfile e LCP.json. Para implantar num Liferay próprio, o gradlew deploy faz tudo, ou você copia o .zip da pasta dist/ para [Liferay Home]/osgi/client-extensions/. No Liferay SaaS, o envio é feito com lcp deploy.",
-    "en": "Each project's build produces a .zip called a LUFFA (Liferay Universal File Format Archive), in the project's dist/ folder. It contains JSON configuration files, the static/ folder (frontend) or batch/ (data), plus Dockerfile and LCP.json. To deploy to your own Liferay, gradlew deploy does it all, or you copy the .zip from dist/ to [Liferay Home]/osgi/client-extensions/. On Liferay SaaS, you upload it with lcp deploy."
+    "pt": "O build de cada projeto gera um .zip chamado LUFFA (Liferay Universal File Format Archive) na pasta dist/ do projeto. Ele contém arquivos de configuração em JSON, a pasta static/ (frontend) ou batch/ (dados), além do Dockerfile e do LCP.json. Em um Liferay próprio (Self-Hosted), o gradlew deploy faz todo o trabalho; outra opção é copiar o .zip da pasta dist/ para [Liferay Home]/osgi/client-extensions/. No Liferay SaaS, o envio é feito com lcp deploy.",
+    "en": "Each project's build produces a .zip called a LUFFA (Liferay Universal File Format Archive) in the project's dist/ folder. It contains JSON configuration files, the static/ folder (frontend) or batch/ (data), plus the Dockerfile and LCP.json. On your own Liferay (Self-Hosted), gradlew deploy does all the work; alternatively, copy the .zip from dist/ to [Liferay Home]/osgi/client-extensions/. On Liferay SaaS, you upload it with lcp deploy."
   },
   "atividades": [
     {
@@ -45,8 +45,8 @@
       "id": "q2",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Sem usar o Gradle, para qual pasta você copia o .zip num Liferay Self-Hosted?",
-        "en": "Without Gradle, which folder do you copy the .zip to on Liferay Self-Hosted?"
+        "pt": "Sem usar o Gradle, para qual pasta você copia o .zip em um Liferay Self-Hosted?",
+        "en": "Without Gradle, which folder do you copy the .zip to on a Self-Hosted Liferay?"
       },
       "opcoes": [
         {
@@ -64,8 +64,8 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "Client extensions têm a pasta própria osgi/client-extensions. A configs/common é do Workspace, não do servidor.",
-        "en": "Client extensions have their own osgi/client-extensions folder. configs/common belongs to Workspace, not the server."
+        "pt": "As client extensions têm uma pasta própria: osgi/client-extensions. A pasta configs/common pertence ao Workspace, não ao servidor.",
+        "en": "Client extensions have their own folder: osgi/client-extensions. The configs/common folder belongs to Workspace, not to the server."
       }
     },
     {
@@ -73,7 +73,7 @@
       "tipo": "ordenar",
       "enunciado": {
         "pt": "Coloque em ordem o caminho de uma client extension até um Liferay Self-Hosted.",
-        "en": "Put in order the path of a client extension to a Liferay Self-Hosted."
+        "en": "Put in order the path of a client extension to a Self-Hosted Liferay."
       },
       "passos": [
         {
@@ -81,12 +81,12 @@
           "en": "Describe the extension in client-extension.yaml"
         },
         {
-          "pt": "Rodar o build do projeto",
+          "pt": "Executar o build do projeto",
           "en": "Run the project build"
         },
         {
-          "pt": "Pegar o .zip (LUFFA) na pasta dist/",
-          "en": "Take the .zip (LUFFA) from the dist/ folder"
+          "pt": "Localizar o .zip (LUFFA) na pasta dist/",
+          "en": "Find the .zip (LUFFA) in the dist/ folder"
         },
         {
           "pt": "Copiar para [Liferay Home]/osgi/client-extensions/",

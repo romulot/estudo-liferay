@@ -10,16 +10,16 @@
     "en": "Creating a Workspace"
   },
   "resumo": {
-    "pt": "O jeito mais rápido é o Blade CLI: \"blade init nome\" cria o Workspace e pergunta qual versão do Liferay usar. Para escolher a versão de antemão, liste as opções com \"blade init -l\" e crie com \"blade init -v versão nome\". A versão fica gravada na propriedade liferay.workspace.product, no gradle.properties. Também dá para montar tudo à mão: um settings.gradle que aplica o plugin com.liferay.workspace, o Gradle Wrapper e o gradle.properties.",
-    "en": "The fastest way is Blade CLI: \"blade init name\" creates the Workspace and asks which Liferay version to use. To pick the version upfront, list the options with \"blade init -l\" and create it with \"blade init -v version name\". The version is stored in the liferay.workspace.product property, in gradle.properties. You can also build it by hand: a settings.gradle that applies the com.liferay.workspace plugin, the Gradle Wrapper and gradle.properties."
+    "pt": "A forma mais rápida é usar o Blade CLI: \"blade init nome\" cria o Workspace e pergunta qual versão do Liferay usar. Para escolher a versão antes, liste as opções com \"blade init -l\" e crie o Workspace com \"blade init -v versão nome\". A versão fica registrada na propriedade liferay.workspace.product, no arquivo gradle.properties. Também é possível montar tudo manualmente: um settings.gradle que aplica o plugin com.liferay.workspace, o Gradle Wrapper e o gradle.properties.",
+    "en": "The fastest way is to use Blade CLI: \"blade init name\" creates the Workspace and asks which Liferay version to use. To pick the version upfront, list the options with \"blade init -l\" and create the Workspace with \"blade init -v version name\". The version is stored in the liferay.workspace.product property, in the gradle.properties file. You can also set everything up manually: a settings.gradle that applies the com.liferay.workspace plugin, the Gradle Wrapper and gradle.properties."
   },
   "atividades": [
     {
       "id": "q1",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Qual propriedade diz ao Workspace qual versão do Liferay usar?",
-        "en": "Which property tells Workspace which Liferay version to use?"
+        "pt": "Qual propriedade define a versão do Liferay usada pelo Workspace?",
+        "en": "Which property sets the Liferay version that Workspace uses?"
       },
       "opcoes": [
         {
@@ -37,16 +37,16 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "liferay.workspace.product, no gradle.properties, define a versão. As outras duas não existem: são nomes inventados para confundir.",
-        "en": "liferay.workspace.product, in gradle.properties, sets the version. The other two do not exist: they are made-up names meant to confuse."
+        "pt": "A propriedade liferay.workspace.product, no gradle.properties, define a versão. As outras duas não existem: são nomes inventados para confundir.",
+        "en": "The liferay.workspace.product property, in gradle.properties, sets the version. The other two do not exist: they are made-up names meant to throw you off."
       }
     },
     {
       "id": "q2",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Você quer ver todas as versões do Liferay disponíveis antes de criar o Workspace. Qual comando usa?",
-        "en": "You want to see every available Liferay version before creating the Workspace. Which command do you use?"
+        "pt": "Você quer ver as versões do Liferay disponíveis antes de criar o Workspace. Qual comando você usa?",
+        "en": "You want to see the available Liferay versions before creating the Workspace. Which command do you use?"
       },
       "opcoes": [
         {
@@ -64,16 +64,16 @@
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "\"blade init -l\" lista as versões (com --all, lista todas). \"blade server init\" baixa o servidor e \"./gradlew projects\" lista os projetos do Workspace.",
-        "en": "\"blade init -l\" lists the versions (with --all, it lists all of them). \"blade server init\" downloads the server and \"./gradlew projects\" lists the Workspace projects."
+        "pt": "\"blade init -l\" lista as versões (com --all, lista todas). \"blade server init\" baixa o servidor, e \"./gradlew projects\" lista os projetos do Workspace.",
+        "en": "\"blade init -l\" lists the versions (with --all, it lists all of them). \"blade server init\" downloads the server, and \"./gradlew projects\" lists the Workspace projects."
       }
     },
     {
       "id": "q3",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Ao criar o Workspace à mão, qual arquivo aplica o plugin com.liferay.workspace?",
-        "en": "When creating the Workspace by hand, which file applies the com.liferay.workspace plugin?"
+        "pt": "Ao criar o Workspace manualmente, qual arquivo aplica o plugin com.liferay.workspace?",
+        "en": "When creating the Workspace manually, which file applies the com.liferay.workspace plugin?"
       },
       "opcoes": [
         {

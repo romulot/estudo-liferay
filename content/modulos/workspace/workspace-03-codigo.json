@@ -10,16 +10,16 @@
     "en": "Creating code in Workspace"
   },
   "resumo": {
-    "pt": "Dentro do Workspace, \"blade create -l\" mostra os modelos de projeto disponíveis. Para gerar um, use \"blade create\" com o modelo (-t), o pacote Java (-p), o nome da classe (-c) e o nome do projeto. Para conferir se o Workspace enxergou o projeto novo, rode \"./gradlew projects\". Para implantar, rode \"gradlew deploy\" a partir da pasta do projeto: o resultado vai para o Liferay local ou para um contêiner Docker.",
-    "en": "Inside Workspace, \"blade create -l\" shows the available project templates. To generate one, use \"blade create\" with the template (-t), the Java package (-p), the class name (-c) and the project name. To check that Workspace picked up the new project, run \"./gradlew projects\". To deploy, run \"gradlew deploy\" from the project folder: the output goes to the local Liferay or to a Docker container."
+    "pt": "Dentro do Workspace, \"blade create -l\" mostra os modelos de projeto disponíveis. Para gerar um projeto, use \"blade create\" com o modelo (-t), o pacote Java (-p), o nome da classe (-c) e o nome do projeto. Para conferir se o Workspace reconheceu o projeto novo, execute \"./gradlew projects\". Para fazer o deploy, execute \"gradlew deploy\" a partir da pasta do projeto: o resultado vai para o Liferay local ou para um contêiner Docker.",
+    "en": "Inside Workspace, \"blade create -l\" shows the available project templates. To generate a project, use \"blade create\" with the template (-t), the Java package (-p), the class name (-c) and the project name. To check that Workspace recognized the new project, run \"./gradlew projects\". To deploy, run \"gradlew deploy\" from the project folder: the output goes to the local Liferay or to a Docker container."
   },
   "atividades": [
     {
       "id": "q1",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Em \"blade create -t mvc-portlet -p com.acme.portlet -c MeuPortlet meu-projeto\", o que o -t define?",
-        "en": "In \"blade create -t mvc-portlet -p com.acme.portlet -c MyPortlet my-project\", what does -t set?"
+        "pt": "Em \"blade create -t mvc-portlet -p com.acme.portlet -c MeuPortlet meu-projeto\", o que a opção -t define?",
+        "en": "In \"blade create -t mvc-portlet -p com.acme.portlet -c MyPortlet my-project\", what does the -t option set?"
       },
       "opcoes": [
         {
@@ -37,16 +37,16 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "-t escolhe o modelo (template), aqui um portlet MVC. -p é o pacote Java e -c é o nome da classe.",
-        "en": "-t picks the template, here an MVC portlet. -p is the Java package and -c is the class name."
+        "pt": "A opção -t escolhe o modelo (template), neste caso um portlet MVC. A -p define o pacote Java, e a -c, o nome da classe.",
+        "en": "The -t option picks the template, in this case an MVC portlet. -p sets the Java package, and -c the class name."
       }
     },
     {
       "id": "q2",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Você criou um projeto e quer confirmar que o Workspace o reconheceu. O que roda?",
-        "en": "You created a project and want to confirm Workspace recognized it. What do you run?"
+        "pt": "Você criou um projeto e quer confirmar que o Workspace o reconheceu. Qual comando você executa?",
+        "en": "You created a project and want to confirm that Workspace recognized it. Which command do you run?"
       },
       "opcoes": [
         {
@@ -64,7 +64,7 @@
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "\"./gradlew projects\" lista os projetos que o Gradle encontrou no Workspace. Se o seu não aparecer, ele não será compilado nem implantado.",
+        "pt": "\"./gradlew projects\" lista os projetos que o Gradle encontrou no Workspace. Se o seu não aparecer, ele não será compilado nem enviado no deploy.",
         "en": "\"./gradlew projects\" lists the projects Gradle found in Workspace. If yours is missing, it will not be built or deployed."
       }
     },
@@ -77,8 +77,8 @@
       },
       "passos": [
         {
-          "pt": "Ver os modelos disponíveis (blade create -l)",
-          "en": "See the available templates (blade create -l)"
+          "pt": "Listar os modelos disponíveis (blade create -l)",
+          "en": "List the available templates (blade create -l)"
         },
         {
           "pt": "Gerar o projeto (blade create -t ...)",
@@ -89,13 +89,13 @@
           "en": "Check that Workspace recognized it (./gradlew projects)"
         },
         {
-          "pt": "Implantar a partir da pasta do projeto (gradlew deploy)",
+          "pt": "Fazer o deploy a partir da pasta do projeto (gradlew deploy)",
           "en": "Deploy from the project folder (gradlew deploy)"
         }
       ],
       "explicacao": {
-        "pt": "Primeiro você escolhe o modelo, depois gera, confere e só então implanta. Conferir antes evita implantar algo que o Gradle nem está compilando.",
-        "en": "First you pick the template, then generate, check and only then deploy. Checking first avoids deploying something Gradle is not even building."
+        "pt": "Primeiro você escolhe o modelo, depois gera o projeto, confere e só então faz o deploy. Conferir antes evita fazer o deploy de algo que o Gradle nem está compilando.",
+        "en": "First you pick the template, then generate the project, check it and only then deploy. Checking first keeps you from deploying something Gradle is not even building."
       }
     }
   ]

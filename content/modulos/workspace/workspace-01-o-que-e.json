@@ -10,8 +10,8 @@
     "en": "What Liferay Workspace is"
   },
   "resumo": {
-    "pt": "Pense no Workspace como a \"bancada\" do desenvolvedor Liferay: uma estrutura de pastas com scripts Gradle prontos para criar, compilar, implantar e testar seus projetos. Ele traz o Gradle Wrapper, então você não precisa instalar o Gradle na máquina, e permite separar configurações por ambiente (desenvolvimento, homologação, produção).",
-    "en": "Think of Workspace as the Liferay developer's \"workbench\": a folder structure with ready-made Gradle scripts to create, build, deploy and test your projects. It ships with the Gradle Wrapper, so you don't need Gradle installed on your machine, and it lets you keep configuration separated per environment (development, staging, production)."
+    "pt": "Pense no Workspace como a \"bancada\" do desenvolvedor Liferay: uma estrutura de pastas com scripts Gradle prontos para criar, compilar, fazer o deploy e testar seus projetos. Ele inclui o Gradle Wrapper, então você não precisa instalar o Gradle na máquina, e permite separar as configurações por ambiente (desenvolvimento, homologação e produção).",
+    "en": "Think of Workspace as the Liferay developer's \"workbench\": a folder structure with ready-made Gradle scripts to create, build, deploy and test your projects. It ships with the Gradle Wrapper, so you don't need to install Gradle on your machine, and it lets you keep settings separate for each environment (development, staging and production)."
   },
   "atividades": [
     {
@@ -23,45 +23,45 @@
       },
       "opcoes": [
         {
-          "pt": "Ser o painel de administração do portal",
-          "en": "Being the portal's admin panel"
+          "pt": "Administrar o portal (usuários, sites e permissões)",
+          "en": "Administering the portal (users, sites and permissions)"
         },
         {
-          "pt": "Organizar o ciclo de desenvolvimento: criar, compilar, implantar e testar projetos",
+          "pt": "Organizar o ciclo de desenvolvimento: criar, compilar, fazer o deploy e testar projetos",
           "en": "Organizing the development lifecycle: creating, building, deploying and testing projects"
         },
         {
-          "pt": "Substituir o banco de dados do Liferay",
-          "en": "Replacing Liferay's database"
+          "pt": "Armazenar os dados do Liferay no lugar do banco de dados",
+          "en": "Storing Liferay's data in place of the database"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "O Workspace é uma estrutura de pastas e scripts Gradle voltada ao desenvolvimento. A administração do portal acontece no próprio Liferay, não no Workspace.",
-        "en": "Workspace is a folder structure plus Gradle scripts aimed at development. Portal administration happens inside Liferay itself, not in Workspace."
+        "pt": "O Workspace é uma estrutura de pastas e scripts Gradle voltada ao desenvolvimento. A administração do portal é feita no próprio Liferay, e os dados continuam no banco de dados.",
+        "en": "Workspace is a folder structure plus Gradle scripts aimed at development. Portal administration is done in Liferay itself, and the data stays in the database."
       }
     },
     {
       "id": "q2",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "Preciso instalar o Gradle na máquina para usar o Workspace?",
-        "en": "Do I need Gradle installed on my machine to use Workspace?"
+        "pt": "É preciso instalar o Gradle na máquina para usar o Workspace?",
+        "en": "Do you need to install Gradle on your machine to use Workspace?"
       },
       "opcoes": [
         {
-          "pt": "Sim, sempre na versão mais nova",
+          "pt": "Sim, sempre na versão mais recente",
           "en": "Yes, always the latest version"
         },
         {
-          "pt": "Não, o Workspace inclui o Gradle Wrapper",
-          "en": "No, Workspace includes the Gradle Wrapper"
+          "pt": "Não: o Workspace inclui o Gradle Wrapper",
+          "en": "No: Workspace includes the Gradle Wrapper"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "O Gradle Wrapper (gradlew) baixa e usa a versão certa do Gradle para o projeto, então todo mundo do time compila do mesmo jeito.",
-        "en": "The Gradle Wrapper (gradlew) downloads and uses the right Gradle version for the project, so everyone on the team builds the same way."
+        "pt": "O Gradle Wrapper (gradlew) baixa e usa a versão correta do Gradle para o projeto. Assim, todo o time compila da mesma forma.",
+        "en": "The Gradle Wrapper (gradlew) downloads and uses the right Gradle version for the project. That way, the whole team builds the same way."
       }
     },
     {
@@ -81,21 +81,21 @@
           "en": "Set the Liferay version (liferay.workspace.product)"
         },
         {
-          "pt": "Baixar o Liferay local (./gradlew initBundle)",
-          "en": "Download a local Liferay (./gradlew initBundle)"
+          "pt": "Baixar um Liferay para rodar localmente (./gradlew initBundle)",
+          "en": "Download a Liferay bundle to run locally (./gradlew initBundle)"
         },
         {
           "pt": "Criar seu projeto dentro do Workspace (blade create)",
           "en": "Create your project inside the Workspace (blade create)"
         },
         {
-          "pt": "Implantar o projeto (gradlew deploy)",
+          "pt": "Fazer o deploy do projeto (gradlew deploy)",
           "en": "Deploy the project (gradlew deploy)"
         }
       ],
       "explicacao": {
         "pt": "Primeiro vem a estrutura, depois a versão do produto, o servidor local, o código e, por fim, o deploy. Sem a versão definida, o Workspace não sabe qual Liferay baixar.",
-        "en": "First the structure, then the product version, the local server, the code and, finally, the deploy. Without the version set, Workspace doesn't know which Liferay to download."
+        "en": "First comes the structure, then the product version, the local server, the code and, finally, the deployment. Without the version set, Workspace doesn't know which Liferay to download."
       }
     }
   ]

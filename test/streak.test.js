@@ -70,7 +70,7 @@ test('markdown com atividades', () => {
   assert.match(md, /\| workspace-1 \| 2 \| 50% \|/);
   assert.match(md, /- 2026-10-29: 2 atividades, 50% de acerto, sessão concluída/);
   assert.match(md, /- 2026-10-28: 1 atividade, 100% de acerto/);
-  assert.match(md, /Sessão de hoje feita/);
+  assert.match(md, /Sessão de hoje concluída/);
 });
 
 test('markdown com catálogo mostra lições concluídas por módulo', () => {

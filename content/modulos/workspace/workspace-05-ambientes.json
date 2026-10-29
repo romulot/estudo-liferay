@@ -10,15 +10,15 @@
     "en": "Environments: local, dev, uat and prod"
   },
   "resumo": {
-    "pt": "A pasta configs separa as configurações por ambiente: common (vale para todos), docker, local, dev, uat e prod. Quando o mesmo arquivo existe em common e em um ambiente, o do ambiente vence. Você escolhe o ambiente com a propriedade liferay.workspace.environment, por exemplo -Pliferay.workspace.environment=dev. Com ela, initBundle monta um Liferay de teste na pasta bundles, e distBundleZip ou distBundleTar geram um pacote pronto para instalar, na pasta build.",
-    "en": "The configs folder splits settings per environment: common (applies to all), docker, local, dev, uat and prod. When the same file exists in common and in an environment, the environment one wins. You pick the environment with the liferay.workspace.environment property, for example -Pliferay.workspace.environment=dev. With it, initBundle sets up a test Liferay in the bundles folder, and distBundleZip or distBundleTar produce a ready-to-install package in the build folder."
+    "pt": "A pasta configs separa as configurações por ambiente: common (vale para todos), docker, local, dev, uat e prod. Quando o mesmo arquivo existe em common e em um ambiente, prevalece o do ambiente. Você escolhe o ambiente com a propriedade liferay.workspace.environment, por exemplo -Pliferay.workspace.environment=dev. Com ela, o initBundle monta um Liferay de teste na pasta bundles, e o distBundleZip ou o distBundleTar geram, na pasta build, um pacote pronto para instalação.",
+    "en": "The configs folder splits settings by environment: common (applies to all), docker, local, dev, uat and prod. When the same file exists in common and in an environment folder, the environment's file takes precedence. You pick the environment with the liferay.workspace.environment property, for example -Pliferay.workspace.environment=dev. With it, initBundle sets up a test Liferay in the bundles folder, and distBundleZip or distBundleTar produce a ready-to-install package in the build folder."
   },
   "atividades": [
     {
       "id": "q1",
       "tipo": "quiz",
       "pergunta": {
-        "pt": "O mesmo portal-ext.properties existe em configs/common e em configs/dev. Qual vale no ambiente dev?",
+        "pt": "O mesmo portal-ext.properties existe em configs/common e em configs/dev. Qual deles vale no ambiente dev?",
         "en": "The same portal-ext.properties exists in configs/common and configs/dev. Which one applies in the dev environment?"
       },
       "opcoes": [
@@ -31,14 +31,14 @@
           "en": "The one in dev"
         },
         {
-          "pt": "Nenhum: dá erro de conflito",
+          "pt": "Nenhum: ocorre um erro de conflito",
           "en": "Neither: it fails with a conflict"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "As pastas de ambiente sobrescrevem o common. Assim, o common guarda o que é igual em todo lugar e cada ambiente guarda só a diferença.",
-        "en": "Environment folders override common. That way common holds what is the same everywhere and each environment holds only the difference."
+        "pt": "As pastas de ambiente se sobrepõem à common. Assim, a common guarda o que é igual em todos os ambientes, e cada ambiente guarda só o que muda.",
+        "en": "Environment folders override common. That way, common holds what every environment shares, and each environment holds only what differs."
       }
     },
     {
@@ -64,8 +64,8 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "distBundleZip empacota o Liferay com as configurações do ambiente escolhido em liferay.workspace.environment. Para .tar.gz, use distBundleTar.",
-        "en": "distBundleZip packages Liferay with the settings of the environment chosen in liferay.workspace.environment. For .tar.gz, use distBundleTar."
+        "pt": "O distBundleZip empacota o Liferay com as configurações do ambiente escolhido em liferay.workspace.environment. Para gerar um .tar.gz, use o distBundleTar.",
+        "en": "distBundleZip packages Liferay with the settings of the environment chosen in liferay.workspace.environment. For a .tar.gz, use distBundleTar."
       }
     },
     {
@@ -89,13 +89,13 @@
           "en": "Build the package (./gradlew distBundleZip -Pliferay.workspace.environment=dev)"
         },
         {
-          "pt": "Pegar o pacote na pasta build e instalar no servidor",
-          "en": "Take the package from the build folder and install it on the server"
+          "pt": "Copiar o pacote da pasta build e instalá-lo no servidor",
+          "en": "Copy the package from the build folder and install it on the server"
         }
       ],
       "explicacao": {
-        "pt": "A configuração vem primeiro, depois você testa no bundle local, gera o pacote e só então leva o pacote da pasta build para o servidor.",
-        "en": "The setting comes first, then you test it in the local bundle, build the package and only then take the package from the build folder to the server."
+        "pt": "A configuração vem primeiro. Depois você testa no bundle local, gera o pacote e só então leva o pacote da pasta build para o servidor.",
+        "en": "The setting comes first. Then you test it in the local bundle, build the package and only then take it from the build folder to the server."
       }
     }
   ]

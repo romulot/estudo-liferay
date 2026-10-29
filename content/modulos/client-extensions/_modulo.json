@@ -6,7 +6,7 @@
     "en": "Client Extensions"
   },
   "descricao": {
-    "pt": "O jeito recomendado de personalizar o Liferay sem implantar código dentro do servidor.",
+    "pt": "A forma recomendada de personalizar o Liferay sem fazer o deploy de código dentro do servidor.",
     "en": "The recommended way to customize Liferay without deploying code inside the server."
   }
 }

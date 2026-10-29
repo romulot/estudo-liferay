@@ -6,7 +6,7 @@
     "en": "Liferay Workspace"
   },
   "descricao": {
-    "pt": "O ambiente de trabalho padrão para criar, compilar e implantar projetos Liferay.",
+    "pt": "O ambiente de trabalho padrão para criar, compilar e fazer o deploy de projetos Liferay.",
     "en": "The standard environment for creating, building and deploying Liferay projects."
   }
 }
