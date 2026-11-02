@@ -58,14 +58,14 @@
           "en": "./gradlew projects"
         },
         {
-          "pt": "./gradlew distBundleZip",
-          "en": "./gradlew distBundleZip"
+          "pt": "blade create -l",
+          "en": "blade create -l"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "\"./gradlew projects\" lista os projetos que o Gradle encontrou no Workspace. Se o seu não aparecer, ele não será compilado nem enviado no deploy.",
-        "en": "\"./gradlew projects\" lists the projects Gradle found in Workspace. If yours is missing, it will not be built or deployed."
+        "pt": "\"./gradlew projects\" lista os projetos que o Gradle encontrou no Workspace. Se o seu não aparecer, ele não será compilado nem enviado no deploy. \"blade create -l\" lista os modelos de projeto, e \"blade init -l\" lista as versões do Liferay.",
+        "en": "\"./gradlew projects\" lists the projects Gradle found in Workspace. If yours is missing, it will not be built or deployed. \"blade create -l\" lists the project templates, and \"blade init -l\" lists the Liferay versions."
       }
     },
     {

@@ -316,6 +316,33 @@ section h2 {
   outline: none;
 }
 
+.rotulo {
+  font-weight: 600;
+}
+
+/* Resumo da lição para consultar durante a atividade. */
+.rever-resumo {
+  margin-top: var(--espaco-2);
+}
+
+.rever-resumo summary {
+  min-height: var(--alvo-min);
+  padding-block: var(--espaco-2);
+  color: var(--cor-primaria-forte);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rever-resumo-corpo {
+  padding-left: var(--espaco-3);
+  border-left: 2px solid var(--cor-borda);
+  overflow-wrap: anywhere;
+}
+
+.rever-resumo-corpo p:last-child {
+  margin-bottom: 0;
+}
+
 h2.titulo-passo {
   font-size: 1.5rem;
   margin: 0 0 var(--espaco-3);

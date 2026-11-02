@@ -54,8 +54,8 @@
           "en": "[Liferay Home]/osgi/client-extensions/"
         },
         {
-          "pt": "[Liferay Home]/osgi/modules/",
-          "en": "[Liferay Home]/osgi/modules/"
+          "pt": "client-extensions/",
+          "en": "client-extensions/"
         },
         {
           "pt": "configs/common/",
@@ -64,8 +64,8 @@
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "As client extensions têm uma pasta própria: osgi/client-extensions. A pasta configs/common pertence ao Workspace, não ao servidor.",
-        "en": "Client extensions have their own folder: osgi/client-extensions. The configs/common folder belongs to Workspace, not to the server."
+        "pt": "No servidor, as client extensions têm uma pasta própria: osgi/client-extensions. As pastas client-extensions/ e configs/common/ pertencem ao Workspace, não ao servidor.",
+        "en": "On the server, client extensions have their own folder: osgi/client-extensions. The client-extensions/ and configs/common/ folders belong to Workspace, not to the server."
       }
     },
     {

@@ -28,8 +28,8 @@ O navegador abre em `http://127.0.0.1:4321/`. Se a porta estiver ocupada, o serv
 
 ### Como funciona uma sessão
 
-1. **Leitura**: resumo da lição nova, com link para a documentação oficial.
-2. **Atividades**: até 5 que você ainda não fez, na ordem dos módulos. Se faltar, completa com revisão, começando pelas que você errou.
+1. **Leitura**: resumo da lição, com link para a documentação oficial. Aparece antes da primeira atividade pendente de cada lição, inclusive quando a lição ficou pela metade na sessão anterior.
+2. **Atividades**: até 5 que você ainda não fez, na ordem dos módulos. Se faltar, completa com revisão, começando pelas que você errou. Cada atividade mostra se é **Nova**, **Continuação** ou **Revisão**, e o resumo da lição pode ser reaberto em "Rever o resumo da lição".
 3. **Feedback na hora**: certo ou errado com ícone, texto e explicação.
 
 A **sequência** aceita 1 dia sem estudo entre dois dias estudados; 2 dias seguidos sem estudo zeram a sequência.

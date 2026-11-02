@@ -31,14 +31,14 @@
           "en": "portal-ext.properties"
         },
         {
-          "pt": "package.json",
-          "en": "package.json"
+          "pt": "gradle.properties",
+          "en": "gradle.properties"
         }
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "O client-extension.yaml descreve cada extensão do projeto. O portal-ext.properties configura o Liferay, e o package.json pertence ao Node.",
-        "en": "client-extension.yaml describes each extension in the project. portal-ext.properties configures Liferay, and package.json belongs to Node."
+        "pt": "O client-extension.yaml descreve cada extensão do projeto. O portal-ext.properties configura o Liferay, e o gradle.properties guarda propriedades do Workspace, como a versão.",
+        "en": "client-extension.yaml describes each extension in the project. portal-ext.properties configures Liferay, and gradle.properties holds Workspace properties such as the version."
       }
     },
     {

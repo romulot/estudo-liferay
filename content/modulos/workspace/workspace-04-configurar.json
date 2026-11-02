@@ -85,14 +85,14 @@
           "en": "release.portal.api"
         },
         {
-          "pt": "com.liferay.portal.kernel",
-          "en": "com.liferay.portal.kernel"
+          "pt": "com.liferay.workspace",
+          "en": "com.liferay.workspace"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "release.dxp.api é para o DXP, e release.portal.api é para o Portal. As duas reúnem as APIs públicas da versão escolhida.",
-        "en": "release.dxp.api is for DXP, and release.portal.api is for Portal. Both bundle the public APIs of the chosen version."
+        "pt": "release.dxp.api é para o DXP, e release.portal.api é para o Portal. As duas reúnem as APIs públicas da versão escolhida. Já com.liferay.workspace é o plugin do Workspace, não uma dependência.",
+        "en": "release.dxp.api is for DXP, and release.portal.api is for Portal. Both bundle the public APIs of the chosen version. com.liferay.workspace, on the other hand, is the Workspace plugin, not a dependency."
       }
     }
   ]

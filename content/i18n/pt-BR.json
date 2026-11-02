@@ -44,5 +44,9 @@
   "home.mais": "Mais",
   "home.modulos": "Módulos",
   "home.modulo_licoes": "{feitas} de {total} lições",
-  "home.modulo_acerto": "{feitas} de {total} lições · {pct}% de acerto"
+  "home.modulo_acerto": "{feitas} de {total} lições · {pct}% de acerto",
+  "atividade.rotulo.nova": "Nova",
+  "atividade.rotulo.continuacao": "Continuação",
+  "atividade.rotulo.revisao": "Revisão",
+  "atividade.rever_resumo": "Rever o resumo da lição"
 }

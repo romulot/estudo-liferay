@@ -27,18 +27,18 @@
           "en": "liferay.workspace.product"
         },
         {
-          "pt": "liferay.portal.version",
-          "en": "liferay.portal.version"
+          "pt": "com.liferay.workspace",
+          "en": "com.liferay.workspace"
         },
         {
-          "pt": "gradle.liferay.release",
-          "en": "gradle.liferay.release"
+          "pt": "gradle.properties",
+          "en": "gradle.properties"
         }
       ],
       "correta": 0,
       "explicacao": {
-        "pt": "A propriedade liferay.workspace.product, no gradle.properties, define a versão. As outras duas não existem: são nomes inventados para confundir.",
-        "en": "The liferay.workspace.product property, in gradle.properties, sets the version. The other two do not exist: they are made-up names meant to throw you off."
+        "pt": "A propriedade liferay.workspace.product define a versão. O gradle.properties é o arquivo onde ela fica, e com.liferay.workspace é o plugin que o settings.gradle aplica.",
+        "en": "The liferay.workspace.product property sets the version. gradle.properties is the file where it lives, and com.liferay.workspace is the plugin that settings.gradle applies."
       }
     },
     {
@@ -50,22 +50,22 @@
       },
       "opcoes": [
         {
-          "pt": "blade server init",
-          "en": "blade server init"
+          "pt": "blade init -v versão nome",
+          "en": "blade init -v version name"
         },
         {
           "pt": "blade init -l",
           "en": "blade init -l"
         },
         {
-          "pt": "./gradlew projects",
-          "en": "./gradlew projects"
+          "pt": "blade init nome",
+          "en": "blade init name"
         }
       ],
       "correta": 1,
       "explicacao": {
-        "pt": "\"blade init -l\" lista as versões (com --all, lista todas). \"blade server init\" baixa o servidor, e \"./gradlew projects\" lista os projetos do Workspace.",
-        "en": "\"blade init -l\" lists the versions (with --all, it lists all of them). \"blade server init\" downloads the server, and \"./gradlew projects\" lists the Workspace projects."
+        "pt": "\"blade init -l\" lista as versões (com --all, lista todas). \"blade init -v versão nome\" já cria o Workspace com a versão escolhida, e \"blade init nome\" cria o Workspace e pergunta a versão durante a criação.",
+        "en": "\"blade init -l\" lists the versions (with --all, it lists all of them). \"blade init -v version name\" creates the Workspace with the chosen version right away, and \"blade init name\" creates the Workspace and asks for the version along the way."
       }
     },
     {
@@ -81,8 +81,8 @@
           "en": "gradle.properties"
         },
         {
-          "pt": "portal-ext.properties",
-          "en": "portal-ext.properties"
+          "pt": "gradlew (Gradle Wrapper)",
+          "en": "gradlew (Gradle Wrapper)"
         },
         {
           "pt": "settings.gradle",
@@ -91,8 +91,8 @@
       ],
       "correta": 2,
       "explicacao": {
-        "pt": "O settings.gradle aplica o plugin. O gradle.properties guarda propriedades como a versão, e o portal-ext.properties configura o próprio Liferay, não o Workspace.",
-        "en": "settings.gradle applies the plugin. gradle.properties holds properties such as the version, and portal-ext.properties configures Liferay itself, not Workspace."
+        "pt": "O settings.gradle aplica o plugin. O gradle.properties guarda propriedades como a versão, e o gradlew é o Gradle Wrapper, que roda o Gradle sem instalá-lo na máquina.",
+        "en": "settings.gradle applies the plugin. gradle.properties holds properties such as the version, and gradlew is the Gradle Wrapper, which runs Gradle without installing it on your machine."
       }
     }
   ]

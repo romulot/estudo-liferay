@@ -2,6 +2,7 @@ import { el, getJson, anunciar } from './dom.js';
 import { t, tx } from './i18n.js';
 import quiz from './activities/quiz.js';
 import ordenar from './activities/ordenar.js';
+import { ordenarPassos } from './passos.js';
 
 // Tipos de atividade que a tela sabe mostrar. Conteúdo de outros tipos fica fora da sessão.
 const TIPOS = { quiz, ordenar };
@@ -31,7 +32,8 @@ async function montarPassos() {
       for (const atividade of licao.atividades) {
         if (!TIPOS[atividade.tipo]) continue;
         const chave = `${licao.id}/${atividade.id}`;
-        (ultimo.has(chave) ? revisao : novas).push({ licao, atividade, errouPorUltimo: ultimo.get(chave) === false });
+        const feita = ultimo.has(chave);
+        (feita ? revisao : novas).push({ licao, atividade, revisao: feita, errouPorUltimo: ultimo.get(chave) === false });
       }
     }
   }
@@ -39,16 +41,10 @@ async function montarPassos() {
   const escolhidas = novas.slice(0, MAX_ATIVIDADES);
   while (escolhidas.length < MIN_ATIVIDADES && revisao.length) escolhidas.push(revisao.shift());
 
-  // Antes da primeira atividade de uma lição nova, um passo de leitura com o resumo.
-  const passos = [];
-  for (const item of escolhidas) {
-    const anterior = passos.at(-1);
-    const licaoNova = !progresso.eventos.some((e) => e.licaoId === item.licao.id);
-    if (licaoNova && anterior?.licao.id !== item.licao.id) passos.push({ tipo: 'leitura', licao: item.licao });
-    const modulo = TIPOS[item.atividade.tipo];
-    passos.push({ tipo: 'atividade', ...item, est: modulo.preparar(item.atividade), resultado: null, salvamento: null });
-  }
-  return passos;
+  const licoesVistas = new Set(progresso.eventos.map((e) => e.licaoId));
+  return ordenarPassos(escolhidas, licoesVistas).map((p) => (p.tipo === 'leitura' ? p : {
+    ...p, est: TIPOS[p.atividade.tipo].preparar(p.atividade), resultado: null, salvamento: null, resumoAberto: false,
+  }));
 }
 
 // Estado da sessão em memória: sobrevive à troca de idioma e à ida à tela inicial.
@@ -92,11 +88,18 @@ function avisoErro(onRetry) {
   );
 }
 
+// Resumo + link da documentação: no passo de leitura e para rever durante a atividade.
+function resumoLicao(licao) {
+  return [
+    el('p', {}, tx(licao.resumo)),
+    el('p', {}, el('a', { href: licao.url, target: '_blank', rel: 'noopener' }, `${t('licao.leia_mais')} ↗`)),
+  ];
+}
+
 function telaLeitura(p, avancar) {
   return [
     el('h2', { tabindex: '-1', class: 'titulo-passo' }, tx(p.licao.titulo)),
-    el('p', {}, tx(p.licao.resumo)),
-    el('p', {}, el('a', { href: p.licao.url, target: '_blank', rel: 'noopener' }, `${t('licao.leia_mais')} ↗`)),
+    ...resumoLicao(p.licao),
     el('div', { class: 'acoes' }, el('button', { type: 'button', id: 'acao', class: 'botao-primario', onclick: avancar }, t('atividade.proximo'))),
   ];
 }
@@ -126,8 +129,13 @@ function telaAtividade(p, idx, ultimo, avancar, atualizar) {
   }
 
   return [
-    el('p', { class: 'contexto apoio' }, tx(p.licao.titulo)),
+    el('p', { class: 'contexto apoio' }, el('span', { class: 'rotulo' }, t(`atividade.rotulo.${p.rotulo}`)), ` · ${tx(p.licao.titulo)}`),
     el('div', { class: 'titulo-passo', tabindex: '-1' }, modulo.render(p.atividade, p.est, { mudar, verificada, passoId: idx })),
+    // Fechado por padrão; o estado fica no passo para sobreviver ao redesenho da tela.
+    el('details', { class: 'rever-resumo', open: p.resumoAberto, ontoggle: (e) => { p.resumoAberto = e.currentTarget.open; } },
+      el('summary', {}, t('atividade.rever_resumo')),
+      el('div', { class: 'rever-resumo-corpo' }, resumoLicao(p.licao)),
+    ),
     // O resultado é falado por anunciar() ao verificar; aqui fica só a versão visual.
     verificada && el('div', { class: `feedback ${p.resultado ? 'feedback-certo' : 'feedback-errado'}` },
       el('p', { class: 'feedback-titulo' }, p.resultado ? `✓ ${t('feedback.certo')}` : `✗ ${t('feedback.errado')}`),

@@ -44,5 +44,9 @@
   "home.mais": "More",
   "home.modulos": "Modules",
   "home.modulo_licoes": "{feitas} of {total} lessons",
-  "home.modulo_acerto": "{feitas} of {total} lessons · {pct}% correct"
+  "home.modulo_acerto": "{feitas} of {total} lessons · {pct}% correct",
+  "atividade.rotulo.nova": "New",
+  "atividade.rotulo.continuacao": "Continued",
+  "atividade.rotulo.revisao": "Review",
+  "atividade.rever_resumo": "Review the lesson summary"
 }

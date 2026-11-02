@@ -10,8 +10,8 @@
     "en": "What Liferay Workspace is"
   },
   "resumo": {
-    "pt": "Pense no Workspace como a \"bancada\" do desenvolvedor Liferay: uma estrutura de pastas com scripts Gradle prontos para criar, compilar, fazer o deploy e testar seus projetos. Ele inclui o Gradle Wrapper, então você não precisa instalar o Gradle na máquina, e permite separar as configurações por ambiente (desenvolvimento, homologação e produção).",
-    "en": "Think of Workspace as the Liferay developer's \"workbench\": a folder structure with ready-made Gradle scripts to create, build, deploy and test your projects. It ships with the Gradle Wrapper, so you don't need to install Gradle on your machine, and it lets you keep settings separate for each environment (development, staging and production)."
+    "pt": "Pense no Workspace como a \"bancada\" do desenvolvedor Liferay: uma estrutura de pastas com scripts Gradle prontos para criar, compilar, fazer o deploy e testar seus projetos. Ele inclui o Gradle Wrapper, então você não precisa instalar o Gradle na máquina, e permite separar as configurações por ambiente (desenvolvimento, homologação e produção). O caminho típico começa criando o Workspace (blade init) e definindo a versão do Liferay (liferay.workspace.product). Depois você baixa um Liferay local (./gradlew initBundle), cria seu projeto (blade create) e faz o deploy (gradlew deploy). As próximas lições detalham cada passo.",
+    "en": "Think of Workspace as the Liferay developer's \"workbench\": a folder structure with ready-made Gradle scripts to create, build, deploy and test your projects. It ships with the Gradle Wrapper, so you don't need to install Gradle on your machine, and it lets you keep settings separate for each environment (development, staging and production). The typical path starts by creating the Workspace (blade init) and setting the Liferay version (liferay.workspace.product). Then you download a local Liferay (./gradlew initBundle), create your project (blade create) and deploy it (gradlew deploy). The next lessons cover each step."
   },
   "atividades": [
     {
